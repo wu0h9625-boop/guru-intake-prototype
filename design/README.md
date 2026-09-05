@@ -59,15 +59,17 @@ python3 serve.py . 8747
 
 在專案裡自己寫的話，專案會動，但設計系統沒有進步 —— 下個專案還要再寫一次，而且兩次會長得不一樣。
 
-## 這個 repo 特有的一步：產生根目錄的 index.html
+## 三站與產生出來的檔案
 
-`../index.html` 是**產生出來的**——它把 `ui/` 的兩支 CSS 內嵌成一份自己站得住的單檔，
-GitHub Pages 才有辦法直接送出去（Pages 沒有 build step，相對路徑的 CSS 會失效）。
-
-改完 `pages/01-intake.html` 之後一定要重跑這行，不然線上看到的還是舊的：
+| 來源 | 產生出來的 |
+|---|---|
+| `pages/01-intake.html` | `../01-intake.html` 與 `../index.html` |
+| `pages/02-plan.html` | `../02-plan.html` |
+| `pages/03-ledger.html` | `../03-ledger.html` |
 
 ```bash
-python3 scripts/inline_page.py pages/01-intake.html ../index.html --standalone
+python3 scripts/inline_page.py pages/02-plan.html ../02-plan.html --standalone
 ```
 
-`index.html` 不要手改。它每次都會被覆蓋。
+站 1 要產兩次（`../01-intake.html` 與 `../index.html`），因為頁面之間的導覽連的是
+`01-intake.html`，而 GitHub Pages 的首頁必須叫 `index.html`。
