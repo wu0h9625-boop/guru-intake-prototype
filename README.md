@@ -9,8 +9,8 @@
 
 | 頁面 | 網址 |
 |---|---|
-| 站 1 · 上傳與方向 | （Pages 部署後補上） |
-| mist 元件參考站（每個元件的每個狀態） | （Pages 部署後補上） |
+| 站 1 · 上傳與方向 | https://wu0h9625-boop.github.io/guru-intake-prototype/ |
+| mist 元件參考站（每個元件的每個狀態） | https://wu0h9625-boop.github.io/guru-intake-prototype/design/ui/reference.html |
 
 站 2（目標樹草案）與站 3（季度對帳）目前仍是 Claude Artifact，頁面頂端的導覽直接連過去。
 
