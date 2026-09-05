@@ -64,6 +64,14 @@ body.mist {
 .mist-split--even { grid-template-columns: 1fr; }
 @media (min-width: 900px) { .mist-split--even { grid-template-columns: 1fr 1fr; } }
 
+/* 等寬多欄。欄數由容器寬度決定，塞不下就自己換行 —— 不要為了三欄寫死 3
+   min() 是必要的：容器比欄寬下限還窄時 minmax 的 min 不會縮，內容會整片溢出 */
+.mist-grid {
+  display: grid;
+  gap: var(--mist-sys-spacing-stack-lg);
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--mist-sys-size-card-min), 100%), 1fr));
+}
+
 .mist-row   { display: flex; align-items: center; gap: var(--mist-sys-spacing-inset-sm); }
 .mist-row--between { justify-content: space-between; }
 .mist-stack { display: flex; flex-direction: column; gap: var(--mist-sys-spacing-stack-md); }

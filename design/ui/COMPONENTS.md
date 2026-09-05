@@ -43,6 +43,7 @@ python3 scripts/serve.py . 8747
 | class | 用途 |
 |---|---|
 | `.mist-split` | 主 2 : 次 1 兩欄。`--even` 改成 1:1 |
+| `.mist-grid` | 等寬多欄。欄數由容器寬度決定，窄了自己換行 |
 | `.mist-stack` / `--sm` | 垂直堆疊 |
 | `.mist-row` / `--between` | 水平排列 |
 | `.mist-grow` | 佔滿剩餘寬度 |

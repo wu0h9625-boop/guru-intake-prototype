@@ -58,18 +58,3 @@ python3 serve.py . 8747
 4. 做完重新複製 `ui/` 過來
 
 在專案裡自己寫的話，專案會動，但設計系統沒有進步 —— 下個專案還要再寫一次，而且兩次會長得不一樣。
-
-## 三站與產生出來的檔案
-
-| 來源 | 產生出來的 |
-|---|---|
-| `pages/01-intake.html` | `../01-intake.html` 與 `../index.html` |
-| `pages/02-plan.html` | `../02-plan.html` |
-| `pages/03-ledger.html` | `../03-ledger.html` |
-
-```bash
-python3 scripts/inline_page.py pages/02-plan.html ../02-plan.html --standalone
-```
-
-站 1 要產兩次（`../01-intake.html` 與 `../index.html`），因為頁面之間的導覽連的是
-`01-intake.html`，而 GitHub Pages 的首頁必須叫 `index.html`。
